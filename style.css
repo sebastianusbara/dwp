@@ -1,0 +1,153 @@
+/*
+Theme Name: Dharma Wanita Persatuan - Kemenhub
+Theme URI: https://wordpress.org/themes/twentyfifteen/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: twentyfifteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+img {
+	max-width: 100%;
+}
+
+.main-header {
+	max-height: 100vh;
+	overflow: hidden;
+}
+
+.main-header--half {
+	max-height: 50vh;
+}
+
+.main-header--half .header-overlay {
+	max-height: 50vh;
+}
+
+.main-header--70 {
+	max-height: 70vh;
+}
+
+.main-header--70 .header-overlay {
+	max-height: 70vh;
+}
+
+.main-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+	font-size: 18px;
+	padding: 20px 40px;
+}
+
+.site-logo {
+	color: white;
+}
+
+.site-menu {
+	position: absolute;
+	right: 0;
+}
+
+.site-menu li {
+	list-style: none;
+}
+
+.site-menu__li, .site-menu__li > a {
+	position: relative;
+	display: inline-block;
+	min-width: 150px;
+	color: white;
+}
+
+.site-menu__li a:hover {
+	text-decoration: none;
+}
+
+.site-submenu {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	padding: 0;
+	background: white;
+	width: 100%;
+	display: none;
+}
+
+.site-submenu li a {
+	display: block;
+	color: black;
+	margin: 5px 10px;
+	border-bottom: 1px solid blue;
+}
+
+.site-submenu li:last-child a {
+	border-bottom: 0;
+}
+
+.site-menu__li:hover > .site-submenu {
+	display: block;
+}
+
+.header-bg {
+	position: relative;
+	z-index: 0;
+	max-width: 100%;
+}
+
+.header-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	max-height: 100vh;
+	background: red;
+	opacity: 0.6;
+}
+
+section {
+	padding: 20px 0;
+}
+
+.home-event {
+	background: #ddd;
+}
+
+.section-title {
+	display: block;
+	position: relative;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.section-title:before, .section-title:after {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	content: '';
+	border-top: 1px solid black;
+	width: 45%;
+}
+
+.section-title:before {
+	left: 0;
+}
+
+.section-title:after {
+	right: 0;
+}
+
+.main-footer {
+	min-height: 300px;
+	background: #34495e;
+}

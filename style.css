@@ -18,6 +18,48 @@ img {
 	max-width: 100%;
 }
 
+.btn:focus {
+	outline: 0;
+}
+
+.btn--black {
+	background: black;
+	color: white;
+}
+
+.btn--black:hover {
+	background: grey;
+}
+
+.btn--round {
+	border-radius: 500px;
+}
+
+.btn--large {
+	padding: 10px 30px;
+	font-size: 24px;
+}
+
+.map-responsive{
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    width:100%;
+    position:absolute;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.container--medium {
+	max-width: 960px;
+}
+
 .main-header {
 	max-height: 100vh;
 	overflow: hidden;
@@ -111,16 +153,32 @@ img {
 	width: 100%;
 	height: 100%;
 	max-height: 100vh;
-	background: red;
-	opacity: 0.6;
+	background: rgba(0,0,0,0.6);
+	color: white;
+}
+
+.page-title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 52px;
 }
 
 section {
 	padding: 20px 0;
 }
 
-.home-event {
-	background: #ddd;
+.home-event, .contact-form {
+	background: #eee;
+}
+
+.contact-info {
+	padding: 50px 0;
+}
+
+.contact-title {
+	margin-bottom: 50px;
 }
 
 .section-title {
@@ -145,6 +203,70 @@ section {
 
 .section-title:after {
 	right: 0;
+}
+
+.contact-info__title, .contact-info__subtitle {
+	margin: 5px 0;
+}
+
+.contact-info__title {
+	font-weight: bold;
+}
+
+.contact-info__subtitle {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.contact-info__list {
+	padding: 0;
+	margin-top: 40px;
+}
+
+.contact-info__list li {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 15px;
+	font-size: 18px;
+}
+
+.contact-info__list li .fa {
+	padding-top: 6px;
+	text-align: center;
+	color: white;
+	background: black;
+	font-size: 16px;
+	border-radius: 100%;
+	height: 30px;
+	width: 30px;
+	margin-right: 7px;
+}
+
+.contact-info__desc {
+	font-size: 16px;
+}
+
+.contact-form {
+	padding: 40px 0;
+}
+
+.form__row {
+	margin-bottom: 20px;
+}
+
+.form__row label {
+	display: block;
+	margin: 0;
+	font-size: 18px;
+}
+
+.form__row input {
+	width: 100%;
+	height: 45px;
+}
+
+.form__row textarea {
+	width: 100%;
 }
 
 .main-footer {

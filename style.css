@@ -104,18 +104,18 @@ img {
 	list-style: none;
 }
 
-.site-menu__li, .site-menu__li > a {
+.site-menu > .menu-item, .site-menu > .menu-item > a {
 	position: relative;
 	display: inline-block;
 	min-width: 150px;
 	color: white;
 }
 
-.site-menu__li a:hover {
+.menu-item a:hover {
 	text-decoration: none;
 }
 
-.site-submenu {
+.sub-menu {
 	position: absolute;
 	left: 0;
 	top: 100%;
@@ -125,18 +125,18 @@ img {
 	display: none;
 }
 
-.site-submenu li a {
+.sub-menu .menu-item a {
 	display: block;
 	color: black;
 	margin: 5px 10px;
 	border-bottom: 1px solid blue;
 }
 
-.site-submenu li:last-child a {
+.sub-menu .menu-item:last-child a {
 	border-bottom: 0;
 }
 
-.site-menu__li:hover > .site-submenu {
+.menu-item:hover > .sub-menu {
 	display: block;
 }
 

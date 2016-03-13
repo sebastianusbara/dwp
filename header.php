@@ -25,7 +25,7 @@
 					</div>
 				</div>
 				<div class="col-md-7">
-					<?php wp_nav_menu(array('menu' => 'Header Menu', 'menu_class' => 'site-menu', 'container' => 'col-md-7')); ?>
+					<?php wp_nav_menu(array('menu' => 'Header Menu', 'menu_class' => 'site-menu', 'container' => '')); ?>
 					<!-- <ul class="site-menu">
 					<li class="site-menu__li">
 						Divisi

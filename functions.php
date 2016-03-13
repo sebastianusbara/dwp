@@ -16,4 +16,4 @@ $custom_header = array(
 		'header-text' => false
 	);
 
-add_theme_support('custom-header', $custom_header);
+//add_theme_support('custom-header', $custom_header);

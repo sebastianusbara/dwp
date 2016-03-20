@@ -51,7 +51,13 @@
 					</div>
 				</div>
 			</nav>
-			<img class="header-bg" src="/dwp/wp-content/themes/dwp/assets/img/dwp.jpg" alt="dharma wanita persatuan">
+			
+			<?php if( has_post_thumbnail() ) :?>
+				<?php the_post_thumbnail(); ?>
+			<?php else :?>
+				<img class="header-bg" src="/dwp/wp-content/themes/dwp/assets/img/dwp.jpg" alt="dharma wanita persatuan">
+			<?php endif; ?>
+
 			<div class="header-overlay"></div>
 		</header>
 	

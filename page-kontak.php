@@ -59,7 +59,9 @@ endif;
 				<h2 class="contact-info__title">Dharma Wanita Persatuan</h2>
 				<h3 class="contact-info__subtitle">Kementerian Perhubungan Republik Indonesia</h3>
 				<p class="contact-info__desc">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ipsam, pariatur doloremque enim in magni eligendi rerum debitis reprehenderit quo animi magnam adipisci quisquam tempore velit dignissimos iure, dolore ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sit placeat est quod ipsa, dolore incidunt. Praesentium, provident alias consequatur voluptatibus, ducimus aut veritatis voluptatem dolor commodi aspernatur dolore, cumque!
+					<?php while( have_posts() ) : the_post(); ?>
+						<?php the_content(); ?>
+					<?php endwhile; ?>
 				</p>
 				<ul class="contact-info__list">
 					<li>

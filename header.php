@@ -33,7 +33,8 @@
 				</div>
 			</nav>
 			<img class="header-bg" src="/dwp/wp-content/themes/dwp/assets/img/dwp.jpg" alt="dharma wanita persatuan">
-			<div class="header-overlay"></div>
+			<div class="header-overlay">
+			</div>
 		</header>
 
 	<?php else : ?>
@@ -58,7 +59,9 @@
 				<img class="header-bg" src="/dwp/wp-content/themes/dwp/assets/img/dwp.jpg" alt="dharma wanita persatuan">
 			<?php endif; ?>
 
-			<div class="header-overlay"></div>
+			<div class="header-overlay">
+				<h1 class="page-title"><?php the_title(); ?></h1>
+			</div>
 		</header>
 	
 	<?php endif; ?>

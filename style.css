@@ -18,6 +18,22 @@ img {
 	max-width: 100%;
 }
 
+.show {
+	display: block!important;
+}
+
+.hidden {
+	display: none!important;
+}
+
+.main-nav .row {
+	margin: 0 -40px;
+}
+
+.main-nav .col-md-9 {
+	padding: 0;
+}
+
 .btn:focus {
 	outline: 0;
 }
@@ -82,33 +98,44 @@ img {
 }
 
 .main-nav {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 2;
 	font-size: 18px;
-	padding: 20px 40px;
+	padding: 15px 40px 0;
+	background: black;
+}
+
+.nav-btn {
+	float: right;
 }
 
 .site-logo {
 	color: white;
+	display: inline-block;
 }
 
 .site-menu {
-	position: absolute;
+	display: none;
+	position: relative;
+	top: 100%;
+	margin-top: 20px;
 	right: 0;
+	background: gainsboro;
 }
 
 .site-menu li {
 	list-style: none;
+	display: block;
 }
 
 .site-menu > .menu-item, .site-menu > .menu-item > a {
 	position: relative;
-	display: inline-block;
+	display: block;
 	min-width: 150px;
-	color: white;
+	color: black;
 }
 
 .menu-item a:hover {
@@ -116,13 +143,13 @@ img {
 }
 
 .sub-menu {
-	position: absolute;
+	position: relative;
 	left: 0;
 	top: 100%;
 	padding: 0;
 	background: white;
 	width: 100%;
-	display: none;
+	display: block;
 }
 
 .sub-menu .menu-item a {
@@ -143,10 +170,11 @@ img {
 .header-bg {
 	position: relative;
 	z-index: 0;
-	max-width: 100%;
+	width: 100%;
 }
 
 .header-overlay {
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -199,7 +227,7 @@ section {
 	transform: translateY(-50%);
 	content: '';
 	border-top: 1px solid black;
-	width: 45%;
+	width: 35%;
 }
 
 .section-title:before {
@@ -277,4 +305,50 @@ section {
 .main-footer {
 	min-height: 300px;
 	background: #34495e;
+}
+
+@media screen and (min-width: 768px) {
+	.section-title:before, .section-title:after {
+		width: 40%;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.header-overlay {
+		display: block;
+	}
+
+	.main-nav {
+		position: absolute;
+		background: transparent;
+		padding: 20px 40px;
+	}
+	
+	.main-nav .col-md-9 {
+
+	}
+
+	.site-menu {
+		position: absolute;
+		display: block!important;
+		background: transparent;
+	}
+
+	.nav-btn {
+		display: none;
+	}
+
+	.site-menu > .menu-item, .site-menu > .menu-item > a {
+		display: inline-block;
+		color: white;
+	}
+
+	.sub-menu {
+		display: none;
+		position: absolute;
+	}
+
+	.section-title:before, .section-title:after {
+		width: 45%;
+	}
 }

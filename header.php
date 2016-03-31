@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>
 		<?php 
 			if(is_front_page()){
@@ -14,6 +15,7 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="<?=dwp_theme_dir?>/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<?php wp_head(); ?>
 </head>
 <body>
@@ -22,12 +24,15 @@
 		<header class="main-header">
 			<nav class="main-nav">
 				<div class="row">
-					<div class="col-md-5">
+					<div class="col-md-3">
 						<div class="site-logo">
 							LPPK - DWP
 						</div>
+						<button class="nav-btn">
+							<span class="fa fa-bars"></span>
+						</button>
 					</div>
-					<div class="col-md-7">
+					<div class="col-md-9">
 						<?php wp_nav_menu(array('menu' => 'Header Menu', 'menu_class' => 'site-menu', 'container' => '')); ?>
 					</div>
 				</div>
@@ -42,12 +47,15 @@
 		<header class="main-header main-header--70">
 			<nav class="main-nav">
 				<div class="row">
-					<div class="col-md-5">
+					<div class="col-md-3">
 						<div class="site-logo">
 							LPPK - DWP
 						</div>
+						<button class="nav-btn">
+							<span class="fa fa-bars"></span>
+						</button>
 					</div>
-					<div class="col-md-7">
+					<div class="col-md-9">
 						<?php wp_nav_menu(array('menu' => 'Header Menu', 'menu_class' => 'site-menu', 'container' => '')); ?>
 					</div>
 				</div>

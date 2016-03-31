@@ -22,7 +22,7 @@
 							<!-- <img src="/dwp/wp-content/themes/dwp/assets/img/dwp.jpg"> -->
 							<?php the_post_thumbnail(); ?>
 							<time><?php echo get_the_date('d M Y'); ?></time>
-							<h3 class="preview-event__title"><?php echo $post->post_title; ?></h3>
+							<h3 class="preview-event__title"><a href="<?php echo get_permalink(); ?>"><?php echo $post->post_title; ?></a></h3>
 							<p class="preview-event__desc">
 								<?php echo substr($post->post_content, 0, 150) . '...'; ?>
 								<a href="<?php echo get_permalink(); ?>">Read More</a>

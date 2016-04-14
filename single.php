@@ -1,11 +1,15 @@
 <?php get_header(); ?>
 
-	<div class="container" id="article">
+	<div class="container container--post" id="article">
 		<?php if(have_posts()) : ?>
 			<?php while( have_posts() ) : the_post(); ?>
-				<h3><?php the_title(); ?></h3>
-				<h5>Ditulis pada: <time><?php echo get_the_date('d M Y'); ?></time></h5>
-				<div class="col-md-8">
+				<div class="post__title">
+					<?php the_title(); ?>
+				</div>
+				<h3 class="align-center post__time">
+					Ditulis pada: <time><?php echo get_the_date('d M Y'); ?></time>
+				</h3>
+				<div class="post__content">
 					<?php the_content(); ?>
 				</div>
 			<?php endwhile; ?>

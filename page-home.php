@@ -20,8 +20,10 @@
 					<div class="col-md-4">
 						<article class="preview-event">
 							<!-- <img src="/dwp/wp-content/themes/dwp/assets/img/dwp.jpg"> -->
-							<?php the_post_thumbnail(); ?>
-							<time><?php echo get_the_date('d M Y'); ?></time>
+							<figure class="preview-event__figure"> 
+								<?php the_post_thumbnail(); ?>
+							</figure>
+							<time>Ditulis pada :  <?php echo get_the_date('d M Y'); ?></time>
 							<h3 class="preview-event__title"><a href="<?php echo get_permalink(); ?>"><?php echo $post->post_title; ?></a></h3>
 							<p class="preview-event__desc">
 								<?php echo substr($post->post_content, 0, 150) . '...'; ?>

@@ -16,6 +16,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="<?=dwp_theme_dir?>/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?=dwp_theme_dir?>/assets/css/slick.css">
+	<link rel="stylesheet" href="<?=dwp_theme_dir?>/assets/css/slick-theme.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>
 </head>
 <body>
@@ -37,8 +40,14 @@
 					</div>
 				</div>
 			</nav>
-			<img class="header-bg" src="/dwp/wp-content/themes/dwp/assets/img/dwp.jpg" alt="dharma wanita persatuan">
-			<div class="header-overlay">
+			<img class="header-bg" src="/dwp/wp-content/themes/dwp/assets/img/dwp-home.jpg" alt="dharma wanita persatuan">
+			<div class="home-overlay">
+				<h1 class="home-title">
+					LPPK - DWP
+				</h1>
+				<h2 class="home-subtitle">
+					Dharma Wanita Persatuan Kementerian Perhubungan RI	
+				</h2>
 			</div>
 		</header>
 

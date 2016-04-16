@@ -8,7 +8,7 @@
 		
 		<div class="row">
 			<?php $args = array(
-					'posts_per_page'   => 3,
+					'posts_per_page'   => 1,
 					'orderby'          => 'date',
 					'order'            => 'DESC',
 					'post_type'        => 'post',

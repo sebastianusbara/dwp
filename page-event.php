@@ -1,119 +1,87 @@
 <?php get_header(); ?>
 
-<?php
-
-$is_form_valid = true;
-$msg = '';
-$success_msg = '';
-
-if(isset($_POST['cu_submit'])) :
-	
-	$cu_f_name 	= isset($_POST['cu_first_name']) ? sanitize_text_field($_POST['cu_first_name']) : false;
-	$cu_l_name 	= isset($_POST['cu_last_name']) ? sanitize_text_field($_POST['cu_last_name']) : false;
-	$cu_email 	= isset($_POST['cu_email']) ? sanitize_text_field($_POST['cu_email']) : false;
-	$cu_subject = isset($_POST['cu_subject']) ? sanitize_text_field($_POST['cu_subject']) : false;
-	$cu_message = isset($_POST['cu_message']) ? esc_textarea($_POST['cu_message']) : false;
-
-	if(!$cu_f_name){
-		$is_form_valid = false;
-		$msg .= 'Isikan Nama Depan Anda <br/>';
-	}
-
-	if(!$cu_l_name){
-		$is_form_valid = false;
-		$msg .= 'Isikan Nama Belakang Anda <br/>';
-	}
-
-	if(!$cu_email){
-		$is_form_valid = false;
-		$msg .= 'Isikan Email Anda <br/>';
-	}
-
-	if(!$cu_subject){
-		$is_form_valid = false;
-		$msg .= 'Isikan Subjek Pesan Anda <br/>';
-	}
-
-	if(!$cu_message){
-		$is_form_valid = false;
-		$msg .= 'Isikan Pesan Anda <br/>';
-	}
-
-	if($is_form_valid){
-		$admin_email = get_option('admin_email');
-		$header = 'Pesan Dari: ' . $cu_f_name;
-
-		if(mail($admin_email, $cu_subject, $cu_message, $header)) {
-			$success_msg = '<h4 class="success">Pesan Terkirim. Terima Kasih Telah Mengontak Kami</h4>';
-		}
-	}
-
-endif;
-
-?>
-
 <section class="event-page">
 	<div class="container container--medium">
-		<ul class="event-list">
-			<li>
-				<div class="row">
-					<div class="col-md-4">
-						<img src="../wp-content/themes/dwp/assets/img/dwp.jpg">
-					</div>
-					<div class="col-md-8">
-						<h2 class="event-list__title">
-							Kongres Dharma Wanita Persatuan Nasional 2016
-						</h2>
-						<time class="event-list__time">
-							Tanggal Acara : 21 April 2016
-						</time>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit quam beatae saepe iure tempore dolores eos. Nihil sequi, sit ipsum magnam error deleniti voluptate natus explicabo, temporibus velit? Ducimus?
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum adipisci odio et perspiciatis officiis reprehenderit maiores sunt sit ducimus dolores, veniam, culpa nesciunt. Voluptatum ratione tempore quas provident, a magnam.
-						</p>
-						<a href="#">Baca Selengkapnya...</a>
-					</div>
-			</li>
-			<li>
-				<div class="row">
-					<div class="col-md-4">
-						<img src="../wp-content/themes/dwp/assets/img/dwp.jpg">
-					</div>
-					<div class="col-md-8">
-						<h2 class="event-list__title">
-							Kongres Dharma Wanita Persatuan Nasional 2016
-						</h2>
-						<time class="event-list__time">
-							Tanggal Acara : 21 April 2016
-						</time>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit quam beatae saepe iure tempore dolores eos. Nihil sequi, sit ipsum magnam error deleniti voluptate natus explicabo, temporibus velit? Ducimus?
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum adipisci odio et perspiciatis officiis reprehenderit maiores sunt sit ducimus dolores, veniam, culpa nesciunt. Voluptatum ratione tempore quas provident, a magnam.
-						</p>
-						<a href="#">Baca Selengkapnya...</a>
-					</div>
-			</li>
-			<li>
-				<div class="row">
-					<div class="col-md-4">
-						<img src="../wp-content/themes/dwp/assets/img/dwp.jpg">
-					</div>
-					<div class="col-md-8">
-						<h2 class="event-list__title">
-							Kongres Dharma Wanita Persatuan Nasional 2016
-						</h2>
-						<time class="event-list__time">
-							Tanggal Acara : 21 April 2016
-						</time>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit quam beatae saepe iure tempore dolores eos. Nihil sequi, sit ipsum magnam error deleniti voluptate natus explicabo, temporibus velit? Ducimus?
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum adipisci odio et perspiciatis officiis reprehenderit maiores sunt sit ducimus dolores, veniam, culpa nesciunt. Voluptatum ratione tempore quas provident, a magnam.
-						</p>
-						<a href="#">Baca Selengkapnya...</a>
-					</div>
-			</li>
-		</ul>
-		<ul class="pagination-list">
+		<?php 
+			$btpgid=get_queried_object_id();
+			$btmetanm=get_post_meta( $btpgid, 'WP_Catid','true' );
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+			$args = array( 'posts_per_page' => 5, 'category_name' => $btmetanm,
+			'paged' => $paged,'post_type' => 'post', 'orderby' => 'date', 'order' => 'DESC', );
+			    $postslist = new WP_Query( $args );
+			if ( $postslist->have_posts() ) :
+		        while ( $postslist->have_posts() ) : $postslist->the_post(); 
+		?>
+				<ul class="event-list">
+		    		<li>
+						<div class="row">
+							<div class="col-md-4">
+								<?php the_post_thumbnail(); ?>
+							</div>
+							<div class="col-md-8">
+								<h2 class="event-list__title">
+									<?php the_title(); ?>
+								</h2>
+								<time class="event-list__time">
+									Tanggal Acara : <?php echo get_the_date('d F Y'); ?>
+								</time>
+								<p>
+									<?php echo substr(get_the_content(), 0, 250) . '...'; ?>
+									<a href="<?php echo get_permalink(); ?>">(Baca Selengkapnya)</a>
+								</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+		<?php
+		         endwhile;  
+
+		        // next_posts_link( 'Older Entries', $postslist->max_num_pages );
+		        // previous_posts_link( 'Next Entries &raquo;' ); 
+		        // wp_reset_postdata();
+		        $i = 1;
+		?>
+				<ul class="pagination-list">
+					<?php if($paged > $i) :?>
+						<li>
+							<a href="<?php echo get_pagenum_link($paged-1); ?>">
+								Sebelumnya
+							</a>
+						</li>
+					<?php endif; ?>
+		<?php
+		        for($i; $i<=$postslist->max_num_pages; $i++) :
+		        	if($i == $paged) :
+		?>
+						<li class="active">
+							<a href="#">
+								<?php echo $i; ?>
+							</a>
+						</li>
+		<?php 			else : ?>
+						<li>
+							<a href="<?php echo get_pagenum_link($i); ?>">
+								<?php echo $i; ?>
+							</a>
+						</li>
+		<?php
+		        	endif;
+		        endfor;
+		?>
+					<?php if($paged != $postslist->max_num_pages) :?>
+						<li>
+							<a href="<?php echo get_pagenum_link($paged+1); ?>">
+								Selanjutnya
+							</a>
+						</li>
+					<?php endif; ?>
+				</ul>
+		<?php
+		    endif;
+		?>
+		<!-- <a href="<?php echo get_pagenum_link($postslist->max_num_pages); ?>">hai gantengs</a> -->
+		<!-- <ul class="pagination-list">
 			<li>
 				<a href="#">
 					Sebelumnya
@@ -149,7 +117,7 @@ endif;
 					Selanjutnya
 				</a>
 			</li>
-		</ul>
+		</ul> -->
 	</div>
 </section>
 

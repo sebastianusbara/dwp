@@ -43,7 +43,7 @@ if(isset($_POST['cu_submit'])) :
 		$admin_email = get_option('admin_email');
 		$header = 'Pesan Dari: ' . $cu_f_name;
 
-		if(mail($admin_email, $cu_subject, $cu_message, $header)) {
+		if(wp_mail($admin_email, $cu_subject, $cu_message, $header)) {
 			$success_msg = '<h4 class="success">Pesan Terkirim. Terima Kasih Telah Mengontak Kami</h4>';
 		}
 	}

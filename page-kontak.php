@@ -13,6 +13,7 @@ if(isset($_POST['cu_submit'])) :
 	$cu_email 	= isset($_POST['cu_email']) ? sanitize_text_field($_POST['cu_email']) : false;
 	$cu_subject = isset($_POST['cu_subject']) ? sanitize_text_field($_POST['cu_subject']) : false;
 	$cu_message = isset($_POST['cu_message']) ? esc_textarea($_POST['cu_message']) : false;
+	$cu_content = $cu_message . '. Dari: ' . $cu_f_name . ' ' . $cu_l_name . ' (' . $cu_email . ').';
 
 	if(!$cu_f_name){
 		$is_form_valid = false;
@@ -43,7 +44,7 @@ if(isset($_POST['cu_submit'])) :
 		$admin_email = get_option('admin_email');
 		$header = 'Pesan Dari: ' . $cu_f_name;
 
-		if(wp_mail($admin_email, $cu_subject, $cu_message, $header)) {
+		if(wp_mail('tr.ardn@gmail.com', $cu_subject, $cu_content, $header)) {
 			$success_msg = '<h4 class="success">Pesan Terkirim. Terima Kasih Telah Mengontak Kami</h4>';
 		}
 	}

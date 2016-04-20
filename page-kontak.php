@@ -77,7 +77,8 @@ endif;
 			</div>
 			<div class="col-md-6">
 				<div class="map-responsive">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.34729218404!2d106.95914891436666!3d-6.848906568904944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e684bb563e128c7%3A0xeba3a711d22591d9!2sTaman+Rekreasi+Selabintana!5e0!3m2!1sid!2sid!4v1457808683546" width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+<!-- 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.34729218404!2d106.95914891436666!3d-6.848906568904944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e684bb563e128c7%3A0xeba3a711d22591d9!2sTaman+Rekreasi+Selabintana!5e0!3m2!1sid!2sid!4v1457808683546" width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15866.695171585136!2d106.82178!3d-6.174409!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf30697258741e178!2sKantor+Kemenhub!5e0!3m2!1sid!2sid!4v1461123199289" width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>

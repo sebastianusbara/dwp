@@ -333,6 +333,7 @@ section {
 	position: relative;
 	text-align: center;
 	margin-bottom: 50px;
+	color: #56696d;
 }
 
 .section-title span {
@@ -355,7 +356,7 @@ section {
 	top: 50%;
 	transform: translateY(-50%);
 	content: '';
-	border-top: 1px solid black;
+	border-top: 1px solid #2c3e50;
 	width: 35%;
 }
 
@@ -429,6 +430,65 @@ section {
 
 .form__row textarea {
 	width: 100%;
+}
+
+.ukm-galeri {
+	padding: 60px 0;
+}
+
+.ukm-galeri__post-title {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 10px 0;
+}
+
+.ukm-category {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.galeri-kegiatan, .ukm-galeri {
+	background: whitesmoke;
+}
+
+.galeri-kegiatan__dropdown {
+	text-align: center;
+	font-size: 18px;
+	margin: 20px 0;
+}
+
+.galeri-kegiatan__title, .galeri-kegiatan__subtitle, .ukm-galeri__title, .ukm-galeri__subtitle {
+	margin: 0;
+	padding: 0;
+}
+
+.galeri-kegiatan__subtitle, .ukm-galeri__subtitle {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.galeri-kegiatan__title, .ukm-galeri__title {
+	padding-bottom: 20px;
+	border-bottom: 1px solid black;
+	margin-bottom: 40px;
+	font-weight: bold;
+}
+
+.galeri-kegiatan__post, .ukm-galeri__post {
+	margin: 60px 20px;
+	margin-top: 0;
+}
+
+.galeri-kegiatan__post time {
+	display: block;
+	font-weight: 600;
+	margin: 5px 0;
+}
+
+.galeri-kegiatan__post-desc {
+	margin: 0;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .main-footer {
@@ -629,6 +689,69 @@ section {
 
 .slick-arrow:focus {
 	outline: 0;
+}
+
+.ukm-about {
+	padding: 40px 0;
+	padding-bottom: 80px;
+	background: whitesmoke;
+}
+
+.ukm-about__title {
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.ukm-about__desc {
+	font-size: 18px;
+}
+
+.ukm-stats__value {
+	text-align: center;
+	font-size: 18px;
+}
+
+.ukm-stats__value span {
+	display: block;
+	font-size: 42px;
+	font-weight: bold;
+}
+
+.ukm-footer {
+	position: relative;
+	z-index: 1;
+	max-height: 400px;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+.ukm-footer img {
+	width: 100%;
+}
+
+.ukm-footer__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	background: black;
+	opacity: 0.6;
+}
+
+.ukm-footer__desc {
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	transform: translate(-20%, -20%);
+	z-index: 3;
+	color: white;
+	max-width: 600px;
+	font-size: 42px;
+	font-weight: bold;
+	line-height: 1.5;
 }
 
 @media screen and (min-width: 768px) {
